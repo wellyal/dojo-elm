@@ -2,6 +2,7 @@ module Main exposing (main)
 
 import Css exposing (..)
 import Css.Colors exposing (..)
+import Debug exposing (..)
 import Html
 import Html.Styled exposing (..)
 import Html.Styled.Attributes exposing (css, placeholder, type_, value)
@@ -49,7 +50,7 @@ update message model =
             )
 
         SubmitForm ->
-            ( { model | loading = True }, Cmd.none )
+            ( log "Log model" { model | loading = True }, Cmd.none )
 
 
 header : Html msg
